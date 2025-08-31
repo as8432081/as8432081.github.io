@@ -11,7 +11,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        <Router base="/">
+        <Router base="/vks">
           <Switch>
             <Route path="/" component={Home} />
             <Route component={NotFound} />
