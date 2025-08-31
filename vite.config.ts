@@ -24,13 +24,11 @@ export default defineConfig({
     },
   },
   root: path.resolve(import.meta.dirname, "client"),
+  base: '/vks/', // Add this line to specify the base path
   build: {
-    // Corrected outDir to place files directly in the 'dist' folder.
-    outDir: path.resolve(import.meta.dirname, "dist"),
+    outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
   },
-  // Add a base path to ensure all asset links are relative to the root.
-  base: './',
   server: {
     fs: {
       strict: true,
