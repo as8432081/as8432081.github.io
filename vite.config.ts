@@ -25,9 +25,12 @@ export default defineConfig({
   },
   root: path.resolve(import.meta.dirname, "client"),
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    // Corrected outDir to place files directly in the 'dist' folder.
+    outDir: path.resolve(import.meta.dirname, "dist"),
     emptyOutDir: true,
   },
+  // Add a base path to ensure all asset links are relative to the root.
+  base: './',
   server: {
     fs: {
       strict: true,
